@@ -1,29 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    <style>
+        div {
+            border: 1px solid gray;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+        }
 
-    
+        div>button {
+            background-color: blue;
+            padding: 0.5rem;
+            border: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
 
 
     <script>
-        
-        function displayMyName(p1){
+
+        function displayMyName(p1) {
             console.log("*****************")
             console.log(p1)
             console.log("*****************")
         }
 
 
+        // 'text' is parameter or argument for the function 'addButton'
+        // function addButton(text) {
+        //     document.write("<div>")
+        //     document.write("<button>")
+        //     document.write(text)
+        //     document.write("</button>")
+        //     document.write("</div>")
+        // }
+        // addButton("Login")
 
-        displayMyName("Sagar")
-        displayMyName("Rahul")
-        displayMyName("Amit")
+
+
+        // function displayFullName(firstName,lastName){
+        //     console.log(firstName + " " + lastName)
+        // }
+
+        // displayFullName("Sagar","Gavand")
+        // displayFullName("Amit","J")
+
+
+        // function doSomething(name,value) {
+        //     if(value == 1){
+        //         console.log("#." + name)
+        //     }else if(value == 2){
+        //         console.log("$." + name)
+        //     }else if(value == 3){
+        //         console.log("@." + name)
+        //     }
+        // }
+        // doSomething("Kiwi",3)
+
 
     </script>
 </body>
+
 </html>
