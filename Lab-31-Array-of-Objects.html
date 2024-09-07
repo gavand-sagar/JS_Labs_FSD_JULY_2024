@@ -24,14 +24,50 @@
             }
         ];
 
-        for (const p of products) {
-            document.write(`
-                    <fieldset>
-                        Brand ${p.brand}, Model - ${p.model}
-                    </fieldset>
-                    <br/>
-            `)
+        function printAll() {
+            //print on console
+            console.log("Printing all Records")
+            console.log("--------------------")
+            for (const p of products) {
+                console.log(`Brand ${p.brand}, Model ${p.model}`)
+            }
+            console.log("")
+            console.log("")
         }
+
+        function addNew(newObj) {
+            //push the record in the main array
+            console.log("adding new record");
+            // do a check if record already exists
+            products.push(newObj)
+        }
+
+        function deleteLast() {
+            // shoud delete last Item from the array
+            console.log("Delete last record")
+            products.pop()
+        }
+
+        printAll();
+
+        addNew({
+            brand: "apple",
+            model: "13"
+        });
+        addNew({
+            brand: "apple",
+            model: "13"
+        });
+        addNew({
+            brand: "apple",
+            model: "13"
+        });
+        addNew({
+            brand: "apple",
+            model: "13"
+        });
+        printAll();
+
 
     </script>
 </body>
