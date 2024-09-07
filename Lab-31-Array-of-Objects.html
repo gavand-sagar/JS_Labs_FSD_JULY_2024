@@ -9,6 +9,18 @@
 
 <body>
     <script>
+
+        // referance types?
+        // arrays, objects , functions
+        //    let obj1 = [{ value: 1 }, { value: 2 }, { value: 3 }]
+
+        //     if (obj1.includes({ value: 1 })) {
+        //         console.log("true")
+        //     } else {
+        //         console.log("false")
+        //     }
+
+
         let products = [
             {
                 brand: "apple",
@@ -37,9 +49,29 @@
 
         function addNew(newObj) {
             //push the record in the main array
-            console.log("adding new record");
+            // console.log("adding new record");
             // do a check if record already exists
-            products.push(newObj)
+            let result = products.some(x => x.brand == newObj.brand && x.model == newObj.model);
+            if (result) {
+                console.log("Record alredy exists")
+            }else{
+                products.push(newObj)
+            }
+
+            // let flag = false;
+            // for (const p of products) {
+            //     if (p.brand == newObj.brand && p.model == newObj.model) {
+            //         flag = true;
+            //     }
+            // }
+
+            // if (flag) {
+            //     console.log("Record alredy exists")
+            // } else {
+            //     products.push(newObj)
+            // }
+
+
         }
 
         function deleteLast() {
