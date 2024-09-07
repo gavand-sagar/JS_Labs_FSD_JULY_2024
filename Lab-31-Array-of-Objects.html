@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let products = [
+            {
+                brand: "apple",
+                model: "15 pro max"
+            },
+            {
+                brand: "apple",
+                model: "14 pro max"
+            },
+            {
+                brand: "samsung",
+                model: "galaxy z"
+            }
+        ];
+
+        for (const p of products) {
+            document.write(`
+                    <fieldset>
+                        Brand ${p.brand}, Model - ${p.model}
+                    </fieldset>
+                    <br/>
+            `)
+        }
+
+    </script>
+</body>
+
+</html>
