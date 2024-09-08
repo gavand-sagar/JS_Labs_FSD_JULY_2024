@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-class{
+            background-color: orange;
+            height: 300px;
+            overflow: hidden;
+            transition: 1s;
+        }
+        .hidden{
+            height: 0px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="doSomething()">Click me</button>
+    <p class="my-class" id="my-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, nesciunt.</p>
+    <script>
+        function doSomething(){
+            let item = document.getElementById('my-para');
+            item.classList.toggle("hidden")
+        }
+    </script>
+</body>
+</html>
