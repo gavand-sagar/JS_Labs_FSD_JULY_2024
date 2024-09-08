@@ -8,17 +8,19 @@
 </head>
 
 <body>
-    <button id="my-btn" onclick="addPara()">Click me</button>
-    
+    <button id="my-btn" onclick="makeVisible()">Visible</button>
+    <button id="your-btn" onclick="makeHidden()">Hide</button>
+
     <p id="my-para">Another para</p>
     <script>
-        function addPara() {
-           
-            let myItem = document.getElementById("my-btn");
-            myItem.innerHTML = "CLICKED"
+        function makeVisible() {
+            let item = document.getElementById("my-para");
+            item.style.display = "block"
+        }
 
-            let myPara = document.getElementById('my-para')
-            myPara.innerHTML = "Some new content!"
+        function makeHidden(){
+            let item = document.getElementById("my-para");
+            item.style.display = "none"
         }
     </script>
 </body>
