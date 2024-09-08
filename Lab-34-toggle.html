@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="changeColor()">Simple Button</button>
+    <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores libero cum quod, dignissimos voluptatibus fugit sequi corporis ad quibusdam excepturi qui exercitationem laborum iusto voluptates doloribus architecto repudiandae! Laborum, magni.</p>
+    <script>
+
+        function changeColor() {
+            let btn = document.getElementById('btn');
+            if (btn.style.backgroundColor == "red") {
+                btn.style.backgroundColor = 'green'
+            } else {
+                btn.style.backgroundColor = 'red'
+            }
+
+            let para = document.getElementById('para');
+            if(para.style.display == 'none'){
+                para.style.display = 'block'
+            }else{
+                para.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+
+</html>
