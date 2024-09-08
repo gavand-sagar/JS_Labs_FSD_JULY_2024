@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sidebar-container {
+            position: fixed;
+            left: 0;
+            width: 100px;
+            z-index: 10;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            box-sizing: border-box;
+            gap: 15px;
+            align-items: start;
+            transition: 1s;
+        }
+        .hidden{
+            left: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <button onclick="toggleSidebar()">=</button>
+    </div>
+    <div id="sidebar" class="sidebar-container hidden">
+        <div>Home</div>
+        <div>About</div>
+        <div>Gallery</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repudiandae adipisci voluptatibus maiores nobis
+        perspiciatis harum, ipsa fugiat, sint nesciunt obcaecati totam sapiente! Obcaecati voluptatibus repellat, vitae
+        accusamus nobis veritatis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repudiandae adipisci voluptatibus maiores nobis
+        perspiciatis harum, ipsa fugiat, sint nesciunt obcaecati totam sapiente! Obcaecati voluptatibus repellat, vitae
+        accusamus nobis veritatis.</p>
+    <script>
+        function toggleSidebar(){
+            let sideBar = document.getElementById('sidebar');
+            sideBar.classList.toggle('hidden')
+        }
+    </script>
+</body>
+
+</html>
