@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="my-btn" onclick="addPara()">Click me</button>
+    
+    <p id="my-para">Another para</p>
+    <script>
+        function addPara() {
+           
+            let myItem = document.getElementById("my-btn");
+            myItem.innerHTML = "CLICKED"
+
+            let myPara = document.getElementById('my-para')
+            myPara.innerHTML = "Some new content!"
+        }
+    </script>
+</body>
+
+</html>
