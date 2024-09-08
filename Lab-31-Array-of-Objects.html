@@ -24,7 +24,12 @@
         let products = [
             {
                 brand: "apple",
-                model: "15 pro max"
+                model: "15 pro max",
+                dimensions: {
+                    width: 23.17,
+                    height: 14.43,
+                    depth: 28.01
+                }
             },
             {
                 brand: "apple",
@@ -54,7 +59,7 @@
             let result = products.some(x => x.brand == newObj.brand && x.model == newObj.model);
             if (result) {
                 console.log("Record alredy exists")
-            }else{
+            } else {
                 products.push(newObj)
             }
 
