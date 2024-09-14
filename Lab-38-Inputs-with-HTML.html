@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Simple Interest Calulator</h3>
+    <label>P</label> <input id="txt1" /><br /><br />
+    <label>R</label> <input id="txt2" /><br /><br />
+    <label>T</label> <input id="txt3" /><br /><br />
+    <button onclick="calculateInterest()">Calculate</button>
+    <p id="result-div"></p>
+    <script>
+        function calculateInterest() {
+            let p = Number(document.getElementById('txt1').value)
+            let r = Number(document.getElementById('txt2').value)
+            let t = Number(document.getElementById('txt3').value)
+
+            let si = p * r * t / 100;
+
+            document.getElementById('result-div').innerHTML = `Interest = ${si} <br/> Total = ${p + si }`
+
+        }
+    </script>
+</body>
+
+</html>
