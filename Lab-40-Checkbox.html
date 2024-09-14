@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    I Agree the Terms & Conditions
+    <input id="myCheckBox" type="checkbox" onchange="onChange()" />
+    <br/>
+    <br/>
+    <button disabled id="btn" onclick="onSubmit()">Submit</button>
+    <script>
+        function onChange() {
+            if (document.getElementById('myCheckBox').checked) {
+                document.getElementById('btn').disabled = false
+            } else {
+                document.getElementById('btn').disabled = true
+            }
+        }
+
+        function onSubmit() {
+            alert("submitted")
+        }
+    </script>
+</body>
+
+</html>
