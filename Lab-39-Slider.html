@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <input value="10" type="range" oninput="updateValue()" id="range1" />
+    <button onclick="updateValue()">UPDATE</button>
+    <p id="result"></p>
+    <script>
+        function updateValue() {
+            let output = document.getElementById('range1');
+            let result = document.getElementById('result');
+            result.innerHTML = output.value;
+        }
+
+        updateValue()
+
+    </script>
+</body>
+
+</html>
