@@ -9,12 +9,44 @@
 
 <body>
     <h3>Simple Interest Calulator</h3>
-    <label>P</label> <input id="txt1" /><br /><br />
-    <label>R</label> <input id="txt2" /><br /><br />
-    <label>T</label> <input id="txt3" /><br /><br />
-    <button onclick="calculateInterest()">Calculate</button>
+    <label>P</label>
+    <input id="txt1" type="range" oninput="txt1Change()" min="500" value="10000" max="100000" step="500"/>
+    <span id="span1">0</span> <br /><br />
+
+    <label>R</label>
+    <input id="txt2" type="range" oninput="txt2Change()" min="1" value="10" max="50" step="0.1"/>
+    <span id="span2">0</span> <br /><br />
+
+
+    <label>T</label>
+    <input id="txt3" type="range" oninput="txt3Change()" min="1" value="5" max="30" step="1"/>
+    <span id="span3">0</span> <br /><br />
+
     <p id="result-div"></p>
     <script>
+
+        function txt1Change() {
+            let span1 = document.getElementById('span1');
+            span1.innerHTML = document.getElementById('txt1').value
+            calculateInterest()
+        }
+
+        function txt2Change() {
+            let span2 = document.getElementById('span2');
+            span2.innerHTML = document.getElementById('txt2').value;
+            calculateInterest()
+        }
+
+        function txt3Change() {
+            let span3 = document.getElementById('span3');
+            span3.innerHTML = document.getElementById('txt3').value;
+            calculateInterest()
+        }
+
+        txt1Change()
+        txt2Change()
+        txt3Change()
+
         function calculateInterest() {
             let p = Number(document.getElementById('txt1').value)
             let r = Number(document.getElementById('txt2').value)
@@ -22,7 +54,7 @@
 
             let si = p * r * t / 100;
 
-            document.getElementById('result-div').innerHTML = `Interest = ${si} <br/> Total = ${p + si }`
+            document.getElementById('result-div').innerHTML = `Interest = ${si} <br/> Total = ${p + si}`
 
         }
     </script>
