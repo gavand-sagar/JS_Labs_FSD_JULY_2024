@@ -22,18 +22,21 @@
 </head>
 
 <body>
-    <input value="10" type="range" oninput="updateValue()" id="range1" />
-    <button onclick="updateValue()">UPDATE</button>
-    <p id="result"></p>
+    <h3 id="heading" style="margin-bottom: 1.5em; text-align: center;">Sip Calculator</h3>
+
+    <p style="margin-top: 1.8em;">
+        <label id="amountlabel"> Monthly Investment</label>
+        <input name="Amount" oninput="update()" id="inputAmount" type="range" value="5000" min="500" max="100000" step="500"/>
+        <br/>
+        <span id="amount"></span> Rs.
+    </p>
+
     <script>
-        function updateValue() {
-            let output = document.getElementById('range1');
-            let result = document.getElementById('result');
-            result.innerHTML = output.value;
+        function update(){
+           let value = document.getElementById("inputAmount").value;
+           let span = document.getElementById('amount');
+           span.innerHTML = value
         }
-
-        updateValue()
-
     </script>
 </body>
 
